@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.b4230afc.css",
-    "main.js": "/static/js/main.bb1d5b28.js",
-    "static/js/453.8ac39941.chunk.js": "/static/js/453.8ac39941.chunk.js",
-    "index.html": "/index.html",
-    "main.b4230afc.css.map": "/static/css/main.b4230afc.css.map",
-    "main.bb1d5b28.js.map": "/static/js/main.bb1d5b28.js.map",
-    "453.8ac39941.chunk.js.map": "/static/js/453.8ac39941.chunk.js.map"
+    "main.css": "/vehicle-management-app/static/css/main.b4230afc.css",
+    "main.js": "/vehicle-management-app/static/js/main.6a1e76af.js",
+    "static/js/453.8ac39941.chunk.js": "/vehicle-management-app/static/js/453.8ac39941.chunk.js",
+    "index.html": "/vehicle-management-app/index.html",
+    "main.b4230afc.css.map": "/vehicle-management-app/static/css/main.b4230afc.css.map",
+    "main.6a1e76af.js.map": "/vehicle-management-app/static/js/main.6a1e76af.js.map",
+    "453.8ac39941.chunk.js.map": "/vehicle-management-app/static/js/453.8ac39941.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b4230afc.css",
-    "static/js/main.bb1d5b28.js"
+    "static/js/main.6a1e76af.js"
   ]
 }
