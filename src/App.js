@@ -4,14 +4,38 @@ import React, { useState, useEffect, useRef } from 'react';
 
 function App() {
   const VehiclesList = [
-    { id: 1, name: "BHZ-074", item: "item1", lastPlaceId: 0 },
-    { id: 2, name: "BHZ-074", item: "item2", lastPlaceId: 0 },
-    { id: 4, name: "BHZ-074", item: "item4", lastPlaceId: 0 },
-    { id: 5, name: "BHZ-074", item: "item5", lastPlaceId: 0 },
-    { id: 7, name: "BHZ-074", item: "item7", lastPlaceId: 0 },
-    { id: 8, name: "BHZ-074", item: "item8", lastPlaceId: 0 },
-    { id: 9, name: "BHZ-074", item: "item9", lastPlaceId: 0 },
-    { id: 10, name: "BHZ-074", item: "item10", lastPlaceId: 0 },
+    { id: 1, name: "", item: "item1", lastPlaceId: 0 },
+    { id: 2, name: "", item: "item2", lastPlaceId: 0 },
+    { id: 3, name: "", item: "item3", lastPlaceId: 0 },
+    { id: 4, name: "", item: "item4", lastPlaceId: 0 },
+    { id: 5, name: "", item: "item5", lastPlaceId: 0 },
+    { id: 6, name: "", item: "item6", lastPlaceId: 0 },
+    { id: 7, name: "", item: "item7", lastPlaceId: 0 },
+    { id: 8, name: "", item: "item8", lastPlaceId: 0 },
+    { id: 9, name: "", item: "item9", lastPlaceId: 0 },
+    { id: 10, name: "", item: "item10", lastPlaceId: 0 },
+
+    { id: 11, name: "", item: "item11", lastPlaceId: 0 },
+    { id: 12, name: "", item: "item12", lastPlaceId: 0 },
+    { id: 13, name: "", item: "item13", lastPlaceId: 0 },
+    { id: 14, name: "", item: "item14", lastPlaceId: 0 },
+    { id: 15, name: "", item: "item15", lastPlaceId: 0 },
+    { id: 16, name: "", item: "item16", lastPlaceId: 0 },
+    { id: 17, name: "", item: "item17", lastPlaceId: 0 },
+    { id: 18, name: "", item: "item18", lastPlaceId: 0 },
+    { id: 19, name: "", item: "item19", lastPlaceId: 0 },
+    { id: 20, name: "", item: "item20", lastPlaceId: 0 },
+
+    { id: 21, name: "", item: "item21", lastPlaceId: 0 },
+    { id: 22, name: "", item: "item22", lastPlaceId: 0 },
+    { id: 23, name: "", item: "item23", lastPlaceId: 0 },
+    { id: 24, name: "", item: "item24", lastPlaceId: 0 },
+    { id: 25, name: "", item: "item25", lastPlaceId: 0 },
+    { id: 26, name: "", item: "item26", lastPlaceId: 0 },
+    { id: 27, name: "", item: "item27", lastPlaceId: 0 },
+    { id: 28, name: "", item: "item28", lastPlaceId: 0 },
+    { id: 29, name: "", item: "item29", lastPlaceId: 0 },
+    { id: 30, name: "", item: "item30", lastPlaceId: 0 },
     // ... (otros vehículos)
   ];
 
