@@ -1,41 +1,34 @@
 // App.js
 import './App.css';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 
 function App() {
   const VehiclesList = [
-    { id: 1, name: "", item: "item1", lastPlaceId: 0 },
-    { id: 2, name: "", item: "item2", lastPlaceId: 0 },
-    { id: 3, name: "", item: "item3", lastPlaceId: 0 },
-    { id: 4, name: "", item: "item4", lastPlaceId: 0 },
-    { id: 5, name: "", item: "item5", lastPlaceId: 0 },
-    { id: 6, name: "", item: "item6", lastPlaceId: 0 },
-    { id: 7, name: "", item: "item7", lastPlaceId: 0 },
-    { id: 8, name: "", item: "item8", lastPlaceId: 0 },
-    { id: 9, name: "", item: "item9", lastPlaceId: 0 },
-    { id: 10, name: "", item: "item10", lastPlaceId: 0 },
+    { id: 3, name: "", item: "item1", lastPlaceId: 0 },
+    { id: 8, name: "", item: "item2", lastPlaceId: 0 },
+    { id: 10, name: "", item: "item3", lastPlaceId: 0 },
+    { id: 11, name: "", item: "item4", lastPlaceId: 0 },
+    { id: 12, name: "", item: "item5", lastPlaceId: 0 },
+    { id: 13, name: "", item: "item6", lastPlaceId: 0 },
+    { id: 15, name: "", item: "item7", lastPlaceId: 0 },
+    { id: 20, name: "", item: "item8", lastPlaceId: 0 },
+    { id: 22, name: "", item: "item9", lastPlaceId: 0 },
+    { id: 25, name: "", item: "item10", lastPlaceId: 0 },
 
-    { id: 11, name: "", item: "item11", lastPlaceId: 0 },
-    { id: 12, name: "", item: "item12", lastPlaceId: 0 },
-    { id: 13, name: "", item: "item13", lastPlaceId: 0 },
-    { id: 14, name: "", item: "item14", lastPlaceId: 0 },
-    { id: 15, name: "", item: "item15", lastPlaceId: 0 },
-    { id: 16, name: "", item: "item16", lastPlaceId: 0 },
-    { id: 17, name: "", item: "item17", lastPlaceId: 0 },
-    { id: 18, name: "", item: "item18", lastPlaceId: 0 },
-    { id: 19, name: "", item: "item19", lastPlaceId: 0 },
-    { id: 20, name: "", item: "item20", lastPlaceId: 0 },
+    { id: 30, name: "", item: "item11", lastPlaceId: 0 },
+    { id: 40, name: "", item: "item12", lastPlaceId: 0 },
+    { id: 49, name: "", item: "item13", lastPlaceId: 0 },
+    { id: 50, name: "", item: "item14", lastPlaceId: 0 },
+    { id: 51, name: "", item: "item15", lastPlaceId: 0 },
+    { id: 53, name: "", item: "item16", lastPlaceId: 0 },
+    { id: 58, name: "", item: "item17", lastPlaceId: 0 },
+    { id: 62, name: "", item: "item18", lastPlaceId: 0 },
+    { id: 76, name: "", item: "item19", lastPlaceId: 0 },
+    { id: 84, name: "", item: "item20", lastPlaceId: 0 },
 
-    { id: 21, name: "", item: "item21", lastPlaceId: 0 },
-    { id: 22, name: "", item: "item22", lastPlaceId: 0 },
-    { id: 23, name: "", item: "item23", lastPlaceId: 0 },
-    { id: 24, name: "", item: "item24", lastPlaceId: 0 },
-    { id: 25, name: "", item: "item25", lastPlaceId: 0 },
-    { id: 26, name: "", item: "item26", lastPlaceId: 0 },
-    { id: 27, name: "", item: "item27", lastPlaceId: 0 },
-    { id: 28, name: "", item: "item28", lastPlaceId: 0 },
-    { id: 29, name: "", item: "item29", lastPlaceId: 0 },
-    { id: 30, name: "", item: "item30", lastPlaceId: 0 },
+    { id: 87, name: "", item: "item21", lastPlaceId: 0 },
+    { id: 90, name: "", item: "item22", lastPlaceId: 0 },
+    { id: 95, name: "", item: "item23", lastPlaceId: 0 },
     // ... (otros vehículos)
   ];
 
@@ -58,9 +51,9 @@ function App() {
   ];
 
   const [vehicles, setVehicles] = useState(VehiclesList)
-   
+
   const [places, setPlaces] = useState(PlacesList)
-   
+
   const [selectedPlace, setSelectedPlace] = useState(null);
 
   const handleAddVehicle = (vehicle) => {
@@ -68,6 +61,7 @@ function App() {
       const updatedPlaces = [...places];
       const placeIndex = updatedPlaces.findIndex((place) => place.id === selectedPlace);
 
+      vehicle.lastPlaceId = places[placeIndex].id;
       updatedPlaces[placeIndex].vehicles.push(vehicle);
       // Actualiza el estado de lugares si es necesario
       setPlaces(updatedPlaces);
@@ -100,7 +94,7 @@ function App() {
   const handleRemoveVehicle = (vehicle) => {
 
     // Encuentra el lugar seleccionado
-    const placeIndex = places.findIndex((place) => place.id === selectedPlace);
+    const placeIndex = places.findIndex((place) => place.id === vehicle.lastPlaceId);
 
     const exist = places[placeIndex].vehicles.some((v) => v.id === vehicle.id);
 
@@ -116,7 +110,6 @@ function App() {
       const isAlreadyAssigned = vehicles.some((v) => v.id === vehicle.id);
 
       if (!isAlreadyAssigned) {
-        vehicle.lastPlaceId = places[placeIndex].id;
         const updatedVehicles = [...vehicles, vehicle];
         setVehicles(updatedVehicles);
       }
@@ -144,30 +137,12 @@ function App() {
   const handleButtonRelease = (vehicle) => {
     clearTimeout(timeoutRef.current);
     handleAddVehicle(vehicle);
-  };
-
-  const handleStorageData = () => {
-    // Guardar en localStorage
-    localStorage.setItem('vehicles', VehiclesList);
-    localStorage.setItem('places', PlacesList);
-  };
-
-  useEffect(() => {
-    // Obtener el nombre guardado al cargar la página
-    const vehiclesStorage = localStorage.getItem('vehicles');
-    const placesStorage = localStorage.getItem('places');
-    if (vehiclesStorage) {
-      setVehicles(vehiclesStorage);
-    }
-    if (placesStorage) {
-      setPlaces(placesStorage)
-    }
-  }, []);
+  };  
 
   return (
     <div className="App">
       <div>
-        
+
         <h2>Tabla de Vehiculos</h2>
         <div className="button-grid">
           {vehicles.map((vehicle) => (
@@ -209,7 +184,6 @@ function App() {
 
           </tbody>
         </table>
-        <button  onClick={() => handleStorageData} >Cargas Datos</button>
       </div>
     </div>
   );

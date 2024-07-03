@@ -1,0 +1,17 @@
+const handleStorageData = () => {
+    // Guardar en localStorage
+    localStorage.setItem('vehicles', VehiclesList);
+    localStorage.setItem('places', PlacesList);
+  };
+
+  useEffect(() => {
+    // Obtener el nombre guardado al cargar la página
+    const vehiclesStorage = localStorage.getItem('vehicles');
+    const placesStorage = localStorage.getItem('places');
+    if (vehiclesStorage) {
+      setVehicles(vehiclesStorage);
+    }
+    if (placesStorage) {
+      setPlaces(placesStorage)
+    }
+  }, []);

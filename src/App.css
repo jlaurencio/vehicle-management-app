@@ -81,8 +81,9 @@
 
 .custom-table th, .custom-table td {
   border: 1px solid #ddd; /* Bordes de las celdas */
-  padding: 8px;
+  padding: 8px; 
   text-align: left;
+  
 }
 
 .custom-table th {
