@@ -137,53 +137,64 @@ function App() {
   const handleButtonRelease = (vehicle) => {
     clearTimeout(timeoutRef.current);
     handleAddVehicle(vehicle);
-  };  
+  };
 
   return (
     <div className="App">
       <div>
-
-        <h2>Tabla de Vehiculos</h2>
-        <div className="button-grid">
-          {vehicles.map((vehicle) => (
-            <button
-              className={vehicle.item}
-              onMouseDown={() => handleButtonPress(vehicle)}
-              onMouseUp={() => handleButtonRelease(vehicle)}
-            >
-              {vehicle.id}
-            </button>
-          ))}
-        </div>
-
-        <h2>Tabla de Lugares</h2>
         <table className="custom-table">
           <thead>
             <tr>
-              <th style={{ width: '10%' }} >Lugares</th>
-              <th style={{ width: '10%' }} >Seleccion</th>
-              <th style={{ width: '90%' }} >Vehiculos</th>
+              <th style={{ width: '75%' }} >Bases</th>
+              <th style={{ width: '25%' }} >Vehiculos</th>
             </tr>
           </thead>
           <tbody>
-            {places.map((place) => (
-              <tr>
-                <td>{place.name}</td>
-                <td>
-                  <input type="checkbox" checked={selectedPlace === place.id} onChange={() => handleSelectPlace(place.id)} />
-                </td>
-                <td>
-                  <div className="button-vehicle-grid">
-                    {place.vehicles.map((vehicle) => (
-                      <button onClick={() => handleRemoveVehicle(vehicle)}>{vehicle.id}</button>
-                    ))}
-                  </div>
-                </td>
-              </tr>
-            ))}
+            <td>
+              <table className="custom-table">
+                <thead>
+                  <tr>
+                    <th style={{ width: '12%' }} >Lugares</th>
+                    <th style={{ width: '8%' }} >Seleccion</th>
+                    <th style={{ width: '90%' }} >Vehiculos</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {places.map((place) => (
+                    <tr>
+                      <td>{place.name}</td>
+                      <td>
+                        <input type="checkbox" checked={selectedPlace === place.id} onChange={() => handleSelectPlace(place.id)} />
+                      </td>
+                      <td>
+                        <div className="button-vehicle-grid">
+                          {place.vehicles.map((vehicle) => (
+                            <button onClick={() => handleRemoveVehicle(vehicle)}>{vehicle.id}</button>
+                          ))}
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
 
+                </tbody>
+              </table>
+            </td>
+            <td>
+              <div className="button-grid">
+                {vehicles.map((vehicle) => (
+                  <button
+                    className={vehicle.item}
+                    onMouseDown={() => handleButtonPress(vehicle)}
+                    onMouseUp={() => handleButtonRelease(vehicle)}
+                  >
+                    {vehicle.id}
+                  </button>
+                ))}
+              </div>
+            </td>
           </tbody>
         </table>
+     
       </div>
     </div>
   );
