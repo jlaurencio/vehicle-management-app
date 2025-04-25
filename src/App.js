@@ -18,6 +18,7 @@ function App() {
 
     { id: 30, name: "", item: "item12", lastPlaceId: 0 },
     { id: 40, name: "", item: "item13", lastPlaceId: 0 },
+    { id: 44, name: "", item: "item13", lastPlaceId: 0 },
     { id: 49, name: "", item: "item14", lastPlaceId: 0 },
     { id: 50, name: "", item: "item15", lastPlaceId: 0 },
     { id: 51, name: "", item: "item16", lastPlaceId: 0 },
