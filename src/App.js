@@ -18,19 +18,19 @@ function App() {
 
     { id: 30, name: "", item: "item12", lastPlaceId: 0 },
     { id: 40, name: "", item: "item13", lastPlaceId: 0 },
-    { id: 44, name: "", item: "item13", lastPlaceId: 0 },
-    { id: 49, name: "", item: "item14", lastPlaceId: 0 },
-    { id: 50, name: "", item: "item15", lastPlaceId: 0 },
-    { id: 51, name: "", item: "item16", lastPlaceId: 0 },
-    { id: 53, name: "", item: "item17", lastPlaceId: 0 },
-    { id: 58, name: "", item: "item18", lastPlaceId: 0 },
-    { id: 62, name: "", item: "item19", lastPlaceId: 0 },
-    { id: 76, name: "", item: "item20", lastPlaceId: 0 },
-    { id: 84, name: "", item: "item21", lastPlaceId: 0 },
+    { id: 44, name: "", item: "item14", lastPlaceId: 0 },
+    { id: 49, name: "", item: "item15", lastPlaceId: 0 },
+    { id: 50, name: "", item: "item16", lastPlaceId: 0 },
+    { id: 51, name: "", item: "item17", lastPlaceId: 0 },
+    { id: 53, name: "", item: "item18", lastPlaceId: 0 },
+    { id: 58, name: "", item: "item19", lastPlaceId: 0 },
+    { id: 62, name: "", item: "item20", lastPlaceId: 0 },
+    { id: 76, name: "", item: "item21", lastPlaceId: 0 },
+    { id: 84, name: "", item: "item22", lastPlaceId: 0 },
 
-    { id: 87, name: "", item: "item22", lastPlaceId: 0 },
-    { id: 90, name: "", item: "item23", lastPlaceId: 0 },
-    { id: 95, name: "", item: "item24", lastPlaceId: 0 },
+    { id: 87, name: "", item: "item23", lastPlaceId: 0 },
+    { id: 90, name: "", item: "item24", lastPlaceId: 0 },
+    { id: 95, name: "", item: "item25", lastPlaceId: 0 },
     // ... (otros vehículos)
   ];
 
