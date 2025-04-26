@@ -15,3 +15,4 @@ const handleStorageData = () => {
       setPlaces(placesStorage)
     }
   }, []);
+  test commit
