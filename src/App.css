@@ -260,6 +260,22 @@
   grid-column: 4;
   grid-row: 8;
 }
+.item33 {
+  grid-column: 1;
+  grid-row: 9;
+}
+.item34 {
+  grid-column: 2;
+  grid-row: 9;
+}
+.item35 {
+  grid-column: 3;
+  grid-row: 9;
+}
+.item36 {
+  grid-column: 4;
+  grid-row: 9;
+}
 
 [type=checkbox] {
   width: 2.5rem;
